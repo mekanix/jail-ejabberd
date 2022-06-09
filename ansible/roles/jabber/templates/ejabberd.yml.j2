@@ -9,7 +9,9 @@ certfiles:
  - /usr/local/etc/ejabberd/certs/{{ jabber_domain }}.key
 
 listen:
+{% for address in jabber_addresses %}
   -
+    ip: "{{ address }}"
     port: 5222
     module: ejabberd_c2s
     max_stanza_size: 262144
@@ -17,10 +19,12 @@ listen:
     access: c2s
     starttls_required: true
   -
+    ip: "{{ address }}"
     port: 5269
     module: ejabberd_s2s_in
     max_stanza_size: 524288
   -
+    ip: "{{ address }}"
     port: 5443
     module: ejabberd_http
     tls: true
@@ -31,6 +35,7 @@ listen:
       /captcha: ejabberd_captcha
       /upload: mod_http_upload
       /ws: ejabberd_http_ws
+{% endfor %}
 
 s2s_use_starttls: required
 

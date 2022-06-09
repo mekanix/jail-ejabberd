@@ -1,3 +1,7 @@
 ---
 jabber_packages:
   - name: ejabberd
+
+jabber_addresses:
+  - "0.0.0.0"
+  - "::"
