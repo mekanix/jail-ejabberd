@@ -5,7 +5,6 @@ ansible/group_vars/all
 ansible/inventory/inventory
 ansible/site.yml
 ansible/roles/*
-!ansible/roles/jabber
 
 templates/fstab
 build/

@@ -1,5 +1,0 @@
----
-- name: restart jabber
-  service:
-    name: ejabberd
-    state: restarted

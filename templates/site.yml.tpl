@@ -6,4 +6,4 @@
   hosts: SERVICE
   roles:
     - onelove-roles.freebsd-common
-    - jabber
+    - onelove-roles.freebsd_ejabberd
